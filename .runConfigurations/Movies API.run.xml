@@ -1,0 +1,9 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="Movies API" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+    <module name="takeApi" />
+    <option name="SPRING_BOOT_MAIN_CLASS" value="poznan.take.domain.TakeApiApplication" />
+    <method v="2">
+      <option name="Make" enabled="true" />
+    </method>
+  </configuration>
+</component>

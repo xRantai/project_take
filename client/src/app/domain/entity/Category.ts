@@ -1,0 +1,8 @@
+export enum Category {
+  DRAMA="DRAMA",
+  COMEDY="COMEDY",
+  FAMILY="FAMILY",
+  THRILLER="THRILLER",
+  ROMANCE="ROMANCE",
+  ACTION="ACTION"
+}

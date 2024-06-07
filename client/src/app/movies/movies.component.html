@@ -1,0 +1,36 @@
+<div *ngIf="movies.length === 0">
+  No movies available.
+</div>
+
+<div>
+  <label for="category-selector">Category: </label>
+  <mat-form-field id="category-selector">
+    <mat-label>Select an option</mat-label>
+    <mat-select [(value)]="selected" (selectionChange)="onCategoryChange()">
+      <mat-option [value]="'None'">None</mat-option>
+      <mat-option *ngFor="let category of categories" [value]="category">
+        {{ category }}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+</div>
+<div>
+  <table *ngIf="movies.length > 0" class="full-width-table">
+    <thead>
+    <tr>
+      <th>Title</th>
+      <th>Price</th>
+      <th>Production Year</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let movie of movies">
+      <td><a [routerLink]="['/detail', movie.id]" (click)="reload()">{{ movie.title }}</a></td>
+      <td class="small-column">{{ movie.price }} zł</td>
+      <td class="small-column">{{ movie.productionYear }}</td>
+    </tr>
+    </tbody>
+  </table>
+</div>
+
+

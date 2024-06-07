@@ -1,0 +1,17 @@
+<div *ngIf="movie">
+  <h1>{{ movie.title }}</h1>
+  <p><strong>Price:</strong> {{ movie.price }} zł</p>
+  <p><strong>Categories:</strong>
+    <span *ngFor="let category of movie.categories; let last = last">
+      {{ category }}<span *ngIf="!last">, </span>
+    </span>
+  </p>
+  <p><strong>Production Year:</strong> {{ movie.productionYear }}</p>
+  <p><strong>Description:</strong> {{ movie.description }}</p>
+  <button (click)="addItemToBasket()">Add to Basket</button>
+  <button routerLink="/basket">Go to basket</button>
+</div>
+<div *ngIf="!movie">
+  <p>No movie selected</p>
+</div>
+
